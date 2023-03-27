@@ -1,6 +1,8 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display:flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -9,11 +11,15 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
-}
+  display:flex;
+  justify-content: space-between;
+} 
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
 a {
@@ -23,3 +29,51 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+
+/* What do we know? */
+/* header > logo / ul */
+/* header contains rl, ll, and logo */
+/* each element is it's own div */
+/* logo is centered in its div */
+/* logo remains stationary is the screen is expanded */
+/* links will move if the page's width is expanded */
+/* the space between individual links ought not expand if the page is expanded */
+/* the individual links ought to have about 4px of space between themselves and the edge of the page */
+
+/* What do we think? */
+/* logo is centered between links*/
+/* links are justified by space between */
+/* it is not that the div for the links is justified left or right, 
+it is that the logo is centered and it's margin expands as the page does */
+
+/* Experimental Results */
+/* If the ul or right-links are set to justify-content: space-between, the space between
+them expands when the screen does. */
+
+/* 
+  What is our container - ul
+  What is our item - li
+  To even space child elements in a container, yo use justify-content: space between;
+
+  So, we apply justify-content: space-between to ul.
+
+  The objects do not space evenly. Instead, all li's bunched up to the right.
+*/
+
+
+/* .header  {
+  font-family: monospace;
+  background: papayawhip;
+  display:flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+  display:flex;
+  justify-content: space-between;
+} */

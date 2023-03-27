@@ -1,0 +1,15 @@
+.click {
+    background-color: black;
+    color: white;
+    border-color: grey;
+}
+
+.click2 {
+    background-color: yellow;
+    border-color: grey;
+}
+
+.basics {
+    font-family: sans-serif;
+    font-size: 28px;
+}
