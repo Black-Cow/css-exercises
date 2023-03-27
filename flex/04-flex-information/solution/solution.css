@@ -29,6 +29,8 @@ img {
 
 body {
   text-align: center;
+  /* This only centers the title. It does not center the container items, because they have a property more
+     specific to them. */
 }
 
 .title {
@@ -37,10 +39,53 @@ body {
 
 .container {
   display: flex;
+  /* This  makes the entire page content orient horizontally, so that every div just takes up as much space as it needs*/
   justify-content: center;
+  /* This centers the text and image */
   gap: 52px;
+  /* This puts a gap between elements */
 }
 
 .info {
   max-width: 200px;
+  /* This keeps the text to a set width. */
 }
+
+/* 
+
+First, everything is given a set width via max-width. This makes it so that the text's width is roughly that
+of the image. This is an efficient way to make the image and text of a uniform width.
+
+Second, display: flex is used to make it such that content is oriented in an inline manner
+instead of in a block-manner. This makes each image-text combo display atop on another.
+t
+Third, text-align:center in the body centers the "Information" title, centers the image over text, 
+and centers the text within the 200px bound. This also centers the content of .info a bit. (??)
+
+Forth, justify-content:center is used to center all the content of the container div
+according to the width of the page.
+
+Importantly, text-align:center makes it such that the image and text are perfectly centered relative to one another. 
+Additionally, justify-content moves the entire group of image-text combinations to the right. 
+These are the two style-choices that cause the content to be centered.
+One is in the container's container, the other is in the container.
+
+Why is it that the text-align: center in the body totally centers the information text, but does not center
+any of the content in the container? Why does it center the content of container at all? 
+
+Since we cannot answer the above question, let us pose new questions.
+
+What is display: flex? 
+
+
+What does display:flex effect?
+
+
+What does text-align:center do?
+
+
+What does justify-content:center do? 
+
+
+
+ */
